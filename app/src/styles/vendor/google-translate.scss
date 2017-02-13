@@ -1,0 +1,44 @@
+/**
+ * Styles for the Google Translate plugin in the header
+ */
+
+/* the auto-generated markup, for reference:
+<div id="google_translate_element">
+  <div class="skiptranslate goog-te-gadget" dir="ltr" style="">
+    <div id=":0.targetLanguage" class="goog-te-gadget-simple" style="white-space: nowrap;">
+    <img src="https://www.google.com/images/cleardot.gif" class="goog-te-gadget-icon" style="background-image: url(https://translate.googleapis.com/translate_static/img/te_ctrl3.gif); background-position: -65px 0px;">
+    <span style="vertical-align: middle;">
+      <a class="goog-te-menu-value" href="javascript:void(0)">
+        <span>Select Language</span>
+        <img src="https://www.google.com/images/cleardot.gif" width="1" height="1">
+        <span style="border-left-width: 1px; border-left-style: solid; border-left-color: rgb(187, 187, 187);">​</span>
+        <img src="https://www.google.com/images/cleardot.gif" width="1" height="1">
+        <span style="color: rgb(155, 155, 155);">▼</span>
+      </a>
+    </span>
+    </div>
+  </div>
+</div>
+*/
+
+#google_translate_element {
+  padding: 0 !important;
+  margin-right: 20px;
+
+}
+
+#google_translate_element * {
+  background-color: white !important;
+  height: auto !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+#google_translate_element .goog-te-gadget-simple {
+  padding: 8px 12px !important;
+}
+
+#google_translate_element .goog-te-gadget-simple img, 
+#google_translate_element .goog-te-gadget-simple span {
+  display: inline-block !important;
+}

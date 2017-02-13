@@ -1,0 +1,161 @@
+/**
+ * Forms
+ */
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+/* HTML5 Input Types */
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="range"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+/* /HTML5 Input Types */
+textarea,
+select {
+    @include bbox;
+    height: auto;
+    padding: $form-input-padding;
+    margin: $form-input-margin;
+    background-color: $form-input-background;
+    border: $form-input-border;
+    border-radius: $form-input-border-radius;
+    box-shadow: none;
+    width: 100%;
+    max-width: 100%;
+}
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+/* HTML5 Input Types */
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="range"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+/* /HTML5 Input Types */
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+input[type="search"] {
+    border-radius: $form-input-search-border-radius;
+}
+
+textarea {
+    min-height: $form-textarea-min-height;
+    max-height: $form-textarea-max-height;
+    padding: $form-textarea-padding;
+}
+
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+/* HTML5 Input Types */
+input[type="color"]:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="email"]:focus,
+input[type="month"]:focus,
+input[type="number"]:focus,
+input[type="range"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+input[type="week"]:focus,
+/* /HTML5 Input Types */
+textarea:focus,
+select:focus {
+    border: $form-input-border-focus;
+    outline: 0;
+}
+
+label {
+    display: block;
+    margin: $form-label-margin;
+    font-weight: normal;
+    font-weight: $form-label-font-weight;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    display: inline;
+    margin-right: $form-radio-check-margin-right;
+}
+
+input[type="range"] {
+    display: block;
+    margin: 1rem 0;
+    width: 100%;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    @include trans;
+    display: block;
+	padding: $form-input-button-padding;
+    margin: $form-input-button-margin;
+	background: $form-input-button-background;
+	color: $form-input-button-color;
+	font-family: $form-input-button-font;
+	font-weight: $form-input-button-font-weight;
+    border: $form-input-button-border;
+	border-radius: $form-input-button-border-radius;
+}
+
+input[type="submit"].center,
+input[type="reset"].center,
+input[type="button"].center {
+    margin: 0 auto;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+    background: $form-input-button-background-hover;
+    border: $form-input-button-border;
+    text-decoration: none;
+    color: $form-input-button-color;
+}
+
+form .required {
+    color: $form-required-color;
+}

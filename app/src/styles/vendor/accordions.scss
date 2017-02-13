@@ -1,0 +1,45 @@
+/**
+ * Accordions
+ * credit: http://jsfiddle.net/ChrisStanyon/z9fWG/
+ */
+
+#accordion li ul { display: none; }
+
+.accordion__item {
+  margin-bottom: 1px;
+}
+
+.accordion__trigger {
+  display: block;
+  padding: $accordion-trigger-padding;
+  color: $accordion-trigger-color;
+  background-color: $accordion-background;
+  text-decoration: none;
+
+  &:visited {
+    color: $accordion-trigger-color;
+    background-color: $accordion-background;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    color: $accordion-trigger-hover-color;
+    background-color: $accordion-background-hover-color;
+  }
+
+}
+
+// the open state
+.accordion__item .open {
+  color: $accordion-open-color;
+  background-color: $accordion-open-background;
+}
+
+.accordion__content-holder {
+  @extend .list-reset;
+  background-color: $accordion-content-background;
+}
+
+.accordion__content {
+  padding: $accordion-content-padding;
+}

@@ -1,0 +1,29 @@
+/**
+ * Links
+ */
+
+a,
+a:visited {
+	color: $link-color;
+	text-decoration: $link-text-decoration;
+}
+
+p a {
+  font-weight: bold;
+  font-weight: $p-link-font-weight;
+}
+
+a:focus,
+a:hover,
+a:active {
+	color: $link-color-hover;
+	text-decoration: $link-text-decoration-hover;
+}
+
+a,
+a:focus,
+a:hover,
+a:active,
+a:visited {
+  outline: 0px !important;
+}

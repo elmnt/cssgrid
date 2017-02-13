@@ -1,0 +1,225 @@
+/**
+ * Header - Nav: Main
+ */
+
+.container--navmain {
+  @extend .container--full;
+  background-color: $navmain-holder-bg; 
+  border-top: none;
+  border-bottom: none;
+  text-align: $navmain-text-align;
+
+/*  @include above(900px) {
+    border-top: 1rem solid $navmain-holder-bg;
+    border-bottom: 1rem solid $navmain-holder-bg;
+  } */
+
+}
+
+.wrap--navmain {
+  @extend .wrap;
+}
+
+// the top-level ul
+.navmain__links {
+  display: inline-block;
+  list-style-type: none; 
+  margin: 0 $spacing 0 0;
+  padding: 0;
+}
+
+// any child ul
+.navmain__links ul {
+  list-style-type: none; 
+  margin: 0;
+  padding: 0;
+}
+
+.navmain__links li {
+  display: inline-block; 
+}
+
+
+// some special styles for only top-level links
+.navmain__links .navmain__levelone {
+  margin-left: 8px;
+}
+
+.navmain__links .navmain__levelone a {
+  background-color: $navmain-levelone-bg;
+}
+
+.navmain__links .navmain__levelone .fa {
+  margin-right: 5px;
+}
+// /some special styles for only top-level links
+
+
+/*
+.navmain__links li.navmain__levelone > a {
+  border: 2px solid lighten($brand-color-1, 50%);
+  @include border-radius($border-radius);
+}
+*/
+
+.navmain__links a {
+  display: block; 
+  background-color: $navmain-bg; 
+  color: $navmain-color; 
+  padding: $navmain-padding; 
+  text-decoration: none; 
+  white-space: nowrap;
+  font-size: $navmain-font-size-mobile;
+  font-weight: $navmain-font-weight;
+  line-height: $nav-global-line-height;
+  text-transform: $navmain-text-transform;
+
+  &:hover,
+  &:active {
+    background-color: $navmain-bg-hover;
+    color: $navmain-color-hover; 
+  }
+
+  @include above(1200px) {
+    font-size: $navmain-font-size;
+  }
+
+}
+
+// ----------- the sub-menus
+
+// keep an ON state on the parent, while we're hoving on the child
+/*
+.navmain__links > li:hover a {
+  //color: white;
+  background-color: $brand-color-0;
+}
+*/
+
+.navmain__links li {
+  position: relative;
+}
+
+.navmain__links li ul {
+  display: none;  
+  position: absolute;
+  top: 100%;
+  right: 0px; // ----------- CHANGE L/R ORIENTATION
+}
+
+.navmain__links li ul li {
+  // float: left; 
+  width: auto;  
+  border-top: 1px solid $navmain-color; 
+  text-align: left; 
+}
+
+// no top margin on the first menu item of the sub-subs 
+.navmain__links li ul li:first-child, 
+.navmain__links li ul li ul li:first-child {
+  border-top: none; 
+}
+
+.navmain__links li ul a {
+  padding: $navmain-subs-padding;
+  // set the color after we've set parent on color (line 67)
+  background-color: $brand-color-1;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $brand-color-0;
+  }
+
+}
+
+.navmain__links li ul ul {
+  top: 0;
+  right: 100%; // ----------- CHANGE L/R ORIENTATION
+}
+
+.navmain__links li:hover > ul {
+  display: block; 
+}
+
+/*
+Keep all sub-menu items consistent (and variable width), 
+so they'll assume the width of the widest link. 
+This requires responsible content management (don't write long links)
+*/
+.navmain__links,
+.navmain__links ul { width: auto; }
+
+.navmain__links li ul li,
+.navmain__links li ul li ul li { 
+  width: 100%;
+}
+
+/*
+We only go two levels deep. That's enough for a menu system. 
+I think any more is overkill, and sloppy UI. 
+Put the sub-page links in the appropriate section. 
+Give the second-level menus a left border
+*/
+
+.navmain__links li ul li ul { 
+  margin-left: 0px; 
+}
+
+// ----------- /the sub-menus
+
+
+// ----------- force some styles to control menu on states
+
+/*
+.navmain__links li a: main nav
+.navmain__links li ul li a: sub-menu
+.navmain__links li ul li ul li a: sub-sub-menu
+*/
+
+.navmain__links > li > ul > li {
+  border-top: 1px solid lighten($brand-color-1, 7%);
+}
+
+.navmain__links li a {
+  // background of main nav items
+  background-color: white;
+  &:visited {}
+  &:hover,
+  &:active,
+  &:focus {}
+}
+
+.navmain__links > li:hover a {
+  // the on state of main nav while hovering subs
+  background-color: $brand-color-0;
+  color: white;
+}
+
+.navmain__links li ul li a {
+  // background of sub-nav items
+  background-color: $brand-color-0 !important;
+  opacity:0.9;
+  &:visited {}
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $brand-color-0 !important;
+  }
+}
+
+.navmain__links li ul li ul li a {
+  // background of sub-sub-nav items
+  background-color: $brand-color-0 !important;
+  &:visited {}
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $brand-color-2 !important;
+  }
+}
+
+.navmain__links > li ul > li:hover a {
+  // the on state of sub nav while hovering sub-subs
+  background-color: $brand-color-4 !important;
+}

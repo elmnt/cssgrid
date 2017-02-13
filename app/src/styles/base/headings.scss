@@ -1,0 +1,66 @@
+/**
+ * Headings
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font;
+  font-weight: $heading-font-weight;
+  color: $heading-color;
+  text-rendering: optimizelegibility;
+  margin: 0 0 $spacing 0;
+  line-height: $heading-line-height;
+}
+
+h1, .h1 {
+  font-size: $h1-size;
+  margin: 0 0 $spacing-large 0;
+}
+
+h2, .h2 {
+  font-size: $h2-size;
+  margin: 0 0 $spacing-large 0;
+}
+
+h3, .h3 {
+  font-size: $h3-size;
+}
+
+h4, .h4 {
+  font-size: $h4-size;
+}
+
+h5, .h5 {
+  font-size: $h5-size;
+}
+
+h6, .h6 {
+  font-size: $h6-size;
+}
+
+/* 
+h1, .h1 {
+	@include font-size($h1-size);
+  margin: $spacing-large 0;
+}
+h2, .h2 {
+	@include font-size($h2-size);
+  margin: $spacing-large 0;
+}
+h3, .h3 {
+	@include font-size($h3-size);
+}
+h4, .h4 {
+	@include font-size($h4-size);
+}
+h5, .h5 {
+	@include font-size($h5-size);
+}
+h6, .h6 {
+	@include font-size($h6-size);
+}
+*/

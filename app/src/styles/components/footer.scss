@@ -1,0 +1,114 @@
+/**
+ * Footer
+ */
+
+[role=contentinfo] {
+    text-align: center;
+}
+
+.container--footer {
+  @extend .container;
+  background-color: $footer-background;
+  padding: 2rem 0;
+  
+  // 1024px and up
+  @include breakpoint(bp-tablet-landscape) {
+    padding: 3rem 0 4rem 0;
+  }
+
+}
+
+.footer__copy {
+  color: $site-color-c;
+  font-size: .75rem;
+}
+
+.footer__copy a {
+  color: white;
+  text-decoration: none;
+  font-weight: normal;
+  font-weight: $fw-normal;
+
+  &:visited {
+    color: white;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    color: $brand-color-1;
+  }
+
+}
+
+.footer__nav {
+
+  list-style-type: none;
+  list-style: none;
+
+  /*
+  @include breakpoint(bp-tablet-landscape) {
+    // add .list-reset styles because we can't @extend inside a media query
+    list-style-type: none;
+    list-style: none;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  */
+
+}
+
+.footer__nav li {
+  
+  // 1024px and up
+  @include breakpoint(bp-tablet-landscape) {
+
+    display: inline-block;
+    margin-right: 20px;
+    
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+  }
+
+}
+
+.footer__nav li a {
+  color: white;
+  text-decoration: none;
+  font-size: .9rem;
+
+  &:visited {
+    color: white;
+    text-decoration: none;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    color: $brand-color-1;
+  }
+
+}
+
+.container-prefooter {
+  @extend .container;
+  background-color: $brand-color-0-light; 
+  border-bottom:4px solid $brand-color-4; 
+  box-shadow: inset 0 -7px 9px -7px rgba(0,0,0,0.4);
+  padding: 2rem 0;
+
+  // 1024px and up
+  @include breakpoint(bp-tablet-landscape) {
+    padding: 2rem 0 2rem 0;
+  }
+
+}
+
+.prefooter__title {
+  //@extend .h2;
+  color: $brand-color-0;
+  font-weight: normal;
+  font-weight: $fw-normal;
+  margin-bottom: 1.5rem! important;
+  text-align: center;
+}
