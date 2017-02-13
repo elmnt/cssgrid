@@ -9,18 +9,15 @@
 
 /**
  * Tools
- * Mixins and functions
  */
 @import "tools/mixins";
-@import "tools/placeholders";
 
 
 /**
  * Generic
  * Ground-zero styles
  */
-//@import "generic/reset";
-@import "generic/normalize";
+@import "generic/reset";
 @import "generic/box-sizing";
 
 
@@ -28,16 +25,14 @@
  * Base
  * Unclassed HTML elements
  */
-@import "base/figures";
-@import "base/forms";
+//@import "base/forms";
 @import "base/headings";
 @import "base/images";
 @import "base/links";
 @import "base/lists";
 @import "base/page";
 @import "base/paragraphs";
-@import "base/quotes";
-@import "base/tables";
+//@import "base/tables";
 
 
 /**
@@ -46,39 +41,15 @@
  */
 @import "objects/wrappers";
 @import "objects/grid";
-// @import "objects/portfolio";
 
 
 /**
  * Components
  * Designed components, chunks of UI
  */
-@import "components/alerts";
-@import "components/breadcrumbs";
 @import "components/buttons";
 @import "components/footer";
 @import "components/header";
-@import "components/header.nav.utility";
-@import "components/header.nav.main";
-@import "components/panels";
-
-
-/**
- * Vendor
- * Third-party styles
- */
-//@import "vendor/animatecss";
-@import "vendor/accordions";
-//@import "vendor/bgslider";
-//@import "vendor/form-hack";
-//@import "vendor/headroom";
-//@import "vendor/sticky";
-@import "vendor/mmenu/jquery.mmenu.all";
-@import "vendor/mmenu.custom";
-@import "vendor/responsiveslider";
-@import "vendor/rainbow/solarized.light";
-//@import "vendor/hamburgers/hamburgers";
-@import "vendor/google-translate";
 
 
 /**

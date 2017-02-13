@@ -1,0 +1,16 @@
+/**
+ * Pre / Code
+ */
+
+pre,
+code,
+samp {
+  font-family: $mono-font;
+  font-size: inherit;
+}
+
+pre {
+  margin-top: 0;
+  margin-bottom: $pre-margin-bottom;
+  overflow-x: scroll;
+}

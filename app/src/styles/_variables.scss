@@ -1,57 +1,19 @@
 /**
- * Settings
+ * Global Settings
  */
-
-/*
-Start with some global settings on top, so they
-take precedence. Then everything else falls in
-the same order as its placement in styles.scss
-*/
-
-$debug: false;
 
 $spacing:       1rem;
 $spacing-large: $spacing*2;
 $spacing-small: $spacing/2;
 
-$border-radius-small: 2px;
-$border-radius:       4px;
-$border-radius-large: 8px;
+$border-radius: 4px;
 
 // ----------- Colors
-
-/* WP colors
-Logo Green: #255a44
-Medium Green: #537363
-Dark Green: #1d4736
-Dark Grey: #303030
-Accent Gold: #f4bd41
-#cdddd6
-*/
-
-$brand-color-0: #255a44;
-$brand-color-1: #537363;
-$brand-color-2: #1d4736;
-$brand-color-3: #303030;
-$brand-color-4: #f4bd41;
-
-$brand-color-0-light: lighten($brand-color-1, 50%);
-$brand-color-1-light: lighten($brand-color-1, 20%);
-
-/*
-$brand-color-1-l1: lighten($brand-color-1, 10%);
-$brand-color-1-l2: lighten($brand-color-1, 15%);
-
-$brand-color-1-d1: darken($brand-color-1, 10%);
-$brand-color-1-d2: darken($brand-color-1, 15%);
-*/
 
 $site-color-3: #333;
 $site-color-6: #666;
 $site-color-9: #999;
 $site-color-c: #ccc;
-$site-color-d: #cdddd6;
-$site-color-e: #f5f5f3;
 $site-color-f: #f6f6f6;
 
 $color-warning:   orange;
@@ -63,34 +25,18 @@ $page-background:  white;
 
 // ----------- Type
 
-// Google Fonts: Open Sans 400/600/700
-
-$sans:      "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$sans:      "Helvetica Neue", Helvetica, Arial, sans-serif;
 $serif:      Georgia, Times, "Times New Roman", serif;
 $mono-font: "Consolas", Monaco, Menlo, "Courier New", monospace;
 
-$fw-normal:   400;
-$fw-semibold: 600;
-$fw-bold:     700;
-
-$base-font-size-lg: 18px;
-$base-font-size:    16px;
 $base-line-height:  1.5em;
+
 
 /**
  * Tools
  * Mixins and functions
  */
 
-// ----------- tools/mixins
-
-$bp-mobile-landscape: 480px;
-$bp-tablet-portrait:  768px;
-$bp-tablet-landscape: 1024px;
-$bp-laptop:           1280px;
-$bp-desktop:          1440px;
-
-// ----------- tools/placeholders
 
 /**
  * Generic
@@ -103,21 +49,16 @@ $bp-desktop:          1440px;
 
 /**
  * Base
- * Unclassed HTML elements
  */
 
-// ----------- base/figures
-
-$figure-margin:  0;
-$figure-padding: 0;
-
-$figcaption-margin:           5px 0 1rem 0;
-$figcaption-padding:          1rem;
-$figcaption-font-family:      $sans;
-$figcaption-font-size:        .75rem;
-$figcaption-line-height:      1.125rem;
-$figcaption-color:            $site-color-6;
-$figcaption-background-color: $site-color-6;
+// ----------- base/headings
+// ----------- base/images
+// ----------- base/links
+// ----------- base/lists
+// ----------- base/page
+// ----------- base/paragraphs
+// ----------- base/quotes
+// ----------- base/tables
 
 // ----------- base/forms
 
@@ -128,8 +69,6 @@ $figcaption-background-color: $site-color-6;
 // ----------- base/headings
 
 $heading-font:        $sans;
-$heading-color:       $brand-color-0;
-$heading-font-weight: $fw-semibold;
 $heading-line-height: 1.25em;
 
 $h1-size: 2.25rem;  //36px
@@ -145,13 +84,6 @@ $img-vertical-align: middle;
 
 // ----------- base/links
 
-$link-color:                 $brand-color-0;
-$link-color-visited:         $brand-color-0;
-$link-text-decoration:       underline;
-$link-color-hover:           $brand-color-4;
-$link-text-decoration-hover: none;
-$p-link-font-weight:         $fw-normal;
-
 // ----------- base/lists
 
 $list-margin:    $spacing;
@@ -163,30 +95,15 @@ $dd-padding:     0;
 
 // ----------- base/page
 
-$global-trans-property:        all;
-$global-trans-duration:        .5s;
-$global-trans-timing-function: ease-out;
-$global-trans-delay:           0;
-
-$hr-margin-top:    $spacing * 2;
-$hr-margin-bottom: $spacing * 3;
-$hr-border:        none;
-$hr-border-bottom: 1px solid $site-color-c;
-
-$transition-time: 0.25s;
-
 // ----------- base/paragraphs
+
+// ----------- base/pre-code
 
 $pre-margin-bottom: $spacing;
 
-// ----------- base/quotes
-
-$blockquote-margin:      0 0 $spacing 0;
-$blockquote-padding:     0 0 0 10px;
-$blockquote-color:       $site-color-6;
-$blockquote-border-left: $site-color-6;
-
 // ----------- base/tables
+
+/*
 
 $table-global-font-family: $sans;
 $table-global-font-size:   .8rem;
@@ -213,6 +130,9 @@ $table-td-text-align:          left;
 $admin-table-border-color:           $brand-color-1;
 $admin-table-thead-background-color: $brand-color-1;
 
+*/
+
+
 /**
  * Objects
  * Cosmetic-free design patterns
@@ -231,16 +151,15 @@ The (optional) wrap sets a max content width.
 
 // ----------- objects/wrappers
 
+$container-pad:        $spacing-large;
 $container-max-width:  100%;
-$container-pad:        2rem;
-$container-pad-tablet: ($spacing * .75);
-$container-pad-mobile: ($spacing * .5);
+$container-pad-tablet: $spacing;
+$container-pad-mobile: $spacing-small;
 $wrap-max-width:       1200px;
 $wrap-min-width:       100px;
 
 $cmbox-default-background: transparent;
 $cmbox-default-padding:    0;
-//$cmbox-default-title:      1rem;
 
 // ----------- objects/grid
 
@@ -248,14 +167,10 @@ $grid-columns:     12;
 $grid-gutter:      3;
 $single-col-width: (100 - (($grid-columns - 1) * $grid-gutter )) / $grid-columns;
 
-// ----------- objects/portfolio
-
 /**
  * Components
  * Designed components, chunks of UI
  */
-
-// ----------- components/alerts
 
 // ----------- components/breadcrumbs
 
@@ -263,10 +178,10 @@ $single-col-width: (100 - (($grid-columns - 1) * $grid-gutter )) / $grid-columns
 
 $button-font:                $sans;
 $button-color:               white;
-$button-background:          $brand-color-0;
+$button-background:          black;
 $button-text-transform:      uppercase;
 $button-font-weight-default: bold;
-$button-font-weight:         $fw-bold;
+$button-font-weight:         bold;
 $button-font-size:           .75rem;
 $button-letter-spacing:      1px;
 $button-padding:             1rem 2rem;
@@ -276,48 +191,11 @@ $button-border-radius:       0;
 $button-border-radius-round: 8px;
 
 $button-color-hover:      white;
-$button-background-hover: $brand-color-2;
+$button-background-hover: #333;
 
-// transparent button
-
-$button-trans-color:            $brand-color-1-light;
-$button-trans-background:       rgba($brand-color-1-light,.125);
-$button-trans-color-hover:      white;
-$button-trans-background-hover: rgba($brand-color-1-light,.25);
-$button-trans-border:           2px solid $brand-color-1-light;
-
-// small button
-
-$button-small-padding:   .75rem 1.5rem;
-$button-small-font-size: .65rem;
-
-// big button
-
-$button-big-padding:   2rem 4rem;
-$button-big-font-size: 1rem;
-
-// ------------------------------------------------------- base/forms
-// placed here so they can inherit button styles
+// base/forms
 
 /*
-$brand-color-0: #31473c;
-$brand-color-1: #537363;
-$brand-color-2: #703606;
-
-$site-color-f: #f6f6f6;
-$site-color-3: #333;
-$site-color-6: #666;
-$site-color-9: #999;
-$site-color-c: #ccc;
-
-$color-warning:   orange;
-$color-error:     red;
-$color-success:   green;
-
-$base-text-color:  $site-color-3;
-$page-background:  white;
-*/
-
 $form-input-padding:              .75rem 1rem;
 $form-input-margin:               0 0 1rem 0;
 $form-input-background:           white;
@@ -347,260 +225,10 @@ $form-input-button-border-radius:    $button-border-radius;
 
 $form-required-color: red;
 
-// ------------------------------------------------------- /base/forms
+*/
 
-// ----------- components/footer
-
-$footer-background: $brand-color-3;
+// base/forms
 
 // ----------- components/header
 
-$nav-global-font:         $sans;
-$nav-global-font-size:    .75rem;
-$nav-global-line-height:  1em;
-$nav-global-font-weight:  $fw-semibold;
-$nav-global-padding:      .75rem 1rem;
-
-// ----------- components/header.nav.utility
-
-$navutility-holder-bg: $brand-color-3;
-$navutility-bg:        $brand-color-3;
-$navutility-bg-hover:  $brand-color-3;
-
-$navutility-color:       $site-color-c;
-$navutility-color-hover: $brand-color-1;
-
-$navutility-font-size:      .7rem;
-$navutility-line-height:    $nav-global-line-height;
-$navutility-margin:         0;
-$navutility-padding:        $nav-global-padding;
-$navutility-font-weight:    $nav-global-font-weight;
-$navutility-text-transform: uppercase;
-
-$navutility-social-icons-margin:      0;
-$navutility-social-icons-pad:         $nav-global-padding;
-$navutility-social-icons-font-size:   $nav-global-font-size;
-$navutility-social-icons-line-height: $nav-global-line-height;
-$navutility-social-icons-color:       $navutility-color;
-$navutility-social-icons-color-hover: $navutility-color-hover;
-$navutility-social-icons-bg:          $navutility-bg;
-$navutility-social-icons-bg-hover:    $navutility-bg-hover;
-
-// ----------- components/header.nav.main
-
-$navmain-font-size:        .8rem;
-$navmain-font-size-mobile: .75rem;
-$navmain-font-weight:      $nav-global-font-weight;
-$navmain-text-transform:   none;
-$navmain-padding:          1rem 1.25rem;
-$navmain-subs-padding:     1rem;
-
-$navmain-holder-bg:   white;
-$navmain-bg:          white;
-$navmain-bg-hover:    white;
-$navmain-color:       $brand-color-1;
-$navmain-color-hover: $brand-color-0;
-$navmain-text-align:  left;
-
-$navmain-levelone-bg: white; /* lighten($brand-color-1, 50%); */
-
-// ----------- components/panels
-
-$panel-background-color: $site-color-e;
-$panel-max-width:        800px;
-$panel-padding:          1rem;
-$panel-padding-tablet:   1rem;
-$panel-padding-mobile:   1rem;
-$panel-border:           5px solid $site-color-e;
-$panel-border-radius:    10px;
-$panel-title-color:      $brand-color-0;
-$panel-copy-color:       $site-color-3;
-
-// panels for form holder
-$panel-form-background-color: $site-color-f;
-$panel-form-padding:          2rem;
-$panel-form-border:           5px solid $site-color-f;
-
-/**
- * Vendor
- * Third-party styles
- */
-
-// ----------- vendor/animatecss
-
-$base-animation-duration:        1s;
-$hinge-animation-duration:       2s;
-$flip-bounce-animation-duration: .75s;
-
-// ----------- vendor/accordions
-
-$accordion-trigger-padding:        .5rem 1rem;
-$accordion-trigger-color:          white;
-$accordion-trigger-hover-color:    white;
-$accordion-background:             $brand-color-1;
-$accordion-background-hover-color: $brand-color-1;
-$accordion-open-color:             white;
-$accordion-open-background:        $brand-color-0;
-$accordion-content-background:     $site-color-f;
-$accordion-content-padding:        1rem;
-
-// ----------- vendor/bgslider
-
-// ----------- vendor/headroom
-
-// ----------- vendor/mmenu/jquery.mmenu.all
-
-// ----------- vendor/mmenu.custom
-
-$mmenu-trigger-align: right;
-$mmm-menu-background-color: $brand-color-0;
-
-// mmenu font settings
-
-$mmm-font:           $sans;
-$mmm-font-size:      $base-font-size;
-$mmm-line-height:    1em;
-$mmm-text-transform: none;
-
-// mmenu borders
-
-$mmm-li-border: 1px solid white;
-/*
-This variable is just so we can carry the same border
-over to the utility nav items, which appear below the
-main nav items in mobile mode
-*/
-$mmm-li-border-color: white;
-
-// mmenu link styles
-
-$mmm-link-color:                  white;
-$mmm-link-background-color:       $brand-color-1;
-$mmm-link-background-color-hover: $brand-color-1;
-$mmm-link-padding:                12px;
-
-// mmenu the subopen buttons
-
-$mmm-subopen-button: $brand-color-0;
-
-// mmenu submenus
-
-$mmm-sub-background-color: $brand-color-1;
-$mmm-sub-border-left:      1px solid white;
-$mmm-sub-link-color:       white;
-$mmm-sub-line-height:      1em;
-$mmm-sub-height:           100%;
-
-// mmenu subopen arrows
-
-$mmm-sub-arrow-color:  rgba(255,255,255,1) !important;
-$mmm-sub-arrow-border: none !important;
-
-// the mmenu utility nav links (they fall under the mmenu main nav links)
-
-$mmm-utility-nav-holder-padding: $mmm-link-padding;
-
-// mmenu navutility styles
-
-$mmm-navutility-links-background:       $brand-color-1;
-$mmm-navutility-social-background:      $brand-color-1;
-$mmm-navutility-input-padding:          .75rem 1rem .65rem 1rem !important;
-$mmm-navutility-input-text-transform:   uppercase !important;
-$mmm-navutility-input-font-size:        .75rem !important;
-$mmm-navutility-input-background-hover: white;
-
-// the mmenu sub-open menus 'back' link
-
-$mmm-subclose-text-transform: uppercase;
-
-// ----------- vendor/responsiveslider
-
-$rslides-margin-bottom:      0;
-$rslides-tap-color:          rgba(0,0,0,0);
-$rslides-nav-top:            50%;
-$rslides-nav-left:           0;
-$rslides-nav-z-index:        2 !important;
-$rslides-nav-opacity:        0.5;
-$rslides-nav-opacity-active: 1.0;
-$rslides-tabs-margin:        1rem 0 !important;
-$rslides-tabs-li-margin:     0 1rem 0 0;
-$rslides-tabs-radius:        15px;
-$rslides-tabs-bg-hex:        #ccc;
-$rslides-tabs-bg-rgb:        rgba(0,0,0, .2);
-$rslides-tabs-shadow:        inset 0 0 2px 0 rgba(0,0,0,.3);
-$rslides-tabs-width:         15px;
-$rslides-tabs-height:        15px;
-$rslides-tabs-here-hex:      #222;
-$rslides-tabs-here-rgb:      rgba(0,0,0,.8);
-
-$rslides-caption-display:          block;
-$rslides-caption-top:              0;
-$rslides-caption-bottom:           0;
-$rslides-caption-left:             0;
-$rslides-caption-right:            0;
-$rslides-caption-padding:          0 3rem;
-$rslides-caption-text-align:       center;
-$rslides-caption-bg-hex:           #000;
-$rslides-caption-bg-rgb:           rgba(0,0,0, 0);
-$rslides-caption-font-margin:      0 0 0rem 0;
-$rslides-caption-font-padding:     0;
-$rslides-caption-font-size:        2rem;
-$rslides-caption-line-height:      1.125em;
-$rslides-caption-font-color:       white;
-$rslides-caption-font-text-shadow: 3px 3px 6px #000;
-
-$rslides-copy-font-display: inline-block;
-$rslides-copy-font-width:   auto;
-$rslides-copy-font-margin:  0;
-$rslides-copy-font-padding: 1rem 2rem;
-$rslides-copy-font-size:    1rem;
-$rslides-copy-line-height:  1em;
-$rslides-copy-background:   rgba(0,0,0,.75);
-$rslides-copy-font-color:   white;
-
-// ----------- vendor/form-hack
-
-/*
-
-// Font
-$fh-font-family: $sans !default;
-$fh-font-size:   1rem !default;
-$fh-font-color:  $base-text-color !default;
-
-// Borders
-$fh-border-radius: 5px !default;
-$fh-border-width: 1px !default;
-$fh-border-style: solid !default;
-$fh-border-color: rgb(200, 200, 200) !default;
-
-// Inputs, Textareas, Select, Option
-$fh-input-height: 40px !default;
-$fh-input-width: 100% !default;
-$fh-input-max-width: 400px !default;
-$fh-input-bg-color: #fff !default;
-$fh-focus-bg-color: rgb(220, 220, 220) !default;
-$fh-focus-border-color: $fh-border-color !default;
-$fh-focus-font-color: $fh-font-color !default;
-
-// Select Vendor Styling
-$fh-allow-select-vendor-styling: true !default;
-
-// Fieldset & Legend Styling
-$fh-fieldset-bare: false !default;
-
-// Buttons & Input Submits
-$fh-button-height: 40px !default;
-$fh-button-width: 100% !default;
-$fh-button-max-width: 200px !default;
-$fh-button-font-color: $fh-font-color !default;
-$fh-button-bg-color: $fh-focus-bg-color !default;
-$fh-button-hover-bg-color: $fh-border-color !default;
-$fh-button-hover-font-color: $fh-font-color !default;
-
-// Layout
-$fh-centered: false !default;
-$fh-display: block !default;
-
-*/
-
-// ----------- vendor/rainbow/solarized.light
+// ----------- components/footer

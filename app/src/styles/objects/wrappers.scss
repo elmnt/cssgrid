@@ -5,9 +5,9 @@
 .container {
   margin: 0 auto;
   padding: $container-pad;
-  width: 100%; 
-  max-width: $container-max-width; 
-  text-align: center;  
+  width: 100%;
+  max-width: $container-max-width;
+  text-align: center;
   @extend .cf;
 }
 
@@ -18,15 +18,13 @@
 
 .wrap {
   margin: 0 auto;
-  max-width: $wrap-max-width; 
-  min-width: $wrap-min-width; 
+  max-width: $wrap-max-width;
+  min-width: $wrap-min-width;
   text-align: left;
   @extend .cf;
 }
 
-.container--footer {}
-
-/* 
+/*
 Center-middle box
 (content centered horizontally & vertically)
 */

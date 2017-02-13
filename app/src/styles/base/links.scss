@@ -3,22 +3,13 @@
  */
 
 a,
-a:visited {
-	color: $link-color;
-	text-decoration: $link-text-decoration;
-}
+a:visited {}
 
-p a {
-  font-weight: bold;
-  font-weight: $p-link-font-weight;
-}
+p a {}
 
 a:focus,
 a:hover,
-a:active {
-	color: $link-color-hover;
-	text-decoration: $link-text-decoration-hover;
-}
+a:active {}
 
 a,
 a:focus,
