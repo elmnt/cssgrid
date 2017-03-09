@@ -10,7 +10,8 @@ var gulp         = require('gulp'),
     sass         = require('gulp-sass'),
     maps         = require('gulp-sourcemaps'),
     cache        = require('gulp-cache'),
-    del          = require('del');
+    del          = require('del'),
+    babel        = require('gulp-babel');
 
 // ----------- Server
 
@@ -61,7 +62,14 @@ gulp.task('concatScripts', function() {
 gulp.task('minifyScripts', ['concatScripts'], function() {
     return gulp.src('app/src/js/app.js')
         .pipe(maps.init())
-        .pipe(uglify())
+        //.pipe(uglify()) added gulp-babel
+        .pipe(babel({
+          presets: ['es2015']
+        }))
+        // add error logging
+        .pipe(uglify().on('error', function(e){
+          console.log(e);
+        }))
         .pipe(rename('app.min.js'))
         .pipe(maps.write('./'))
         .pipe(gulp.dest('app/js'));
