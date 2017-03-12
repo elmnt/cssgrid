@@ -1,0 +1,180 @@
+/**
+ *
+ * CSS Grid
+ * My primary resource for these samples was: http://gridbyexample.com/
+ * I'm folding this partial into my preexisting Sass framework, and modifying
+ * the basic ideas on Grid By Example to get slightly more 'real world' scenarios.
+ *
+ */
+
+.grid--wrapper {
+   padding-bottom: 2rem;
+   border-bottom: 1px solid pink;
+   margin-bottom: 2rem;
+}
+
+/**
+ *
+ * Example 01: Defining a Basic Grid
+ *
+ */
+.grid--one {
+   @extend .grid--wrapper;
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-gap: 10px;
+   // above is shorthand for values that can be set individually:
+   // grid-column-gap: 10px;
+   // grid-row-gap: 10px;
+   background-color: #fff;
+   color: #444;
+
+   @media only screen and (min-width: 700px) and (max-width: 1200px) {
+      grid-template-columns: 1fr 1fr;
+   }
+   @media only screen and (min-width: 1200px) and (max-width: 1600px) {
+      grid-template-columns: 1fr 1fr 1fr;
+   }
+   @media only screen and (min-width: 1600px) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+   }
+
+   .box {
+      background-color: #444;
+      color: #fff;
+      border-radius: 5px;
+      padding: 20px;
+      font-size: 150%;
+   }
+
+}
+
+
+/**
+ *
+ * Example 02: Line-based placement
+ * We'd want to rework the child elements for various screen sizes,
+ * but this is a great example of more controlled placement.
+ *
+ */
+.grid--two {
+   @extend .grid--wrapper;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-gap: 10px;
+   // above is shorthand for values that can be set individually:
+   // grid-column-gap: 10px;
+   // grid-row-gap: 10px;
+   background-color: #fff;
+   color: #444;
+
+   .box {
+      background-color: #444;
+      color: #fff;
+      border-radius: 5px;
+      padding: 20px;
+      font-size: 150%;
+   }
+
+   /*
+   .a {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+   }
+   .b {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
+   }
+   .c {
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 2;
+      grid-row-end: 3;
+   }
+   .d {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+   }
+   .e {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3;
+   }
+   .f {
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 2;
+   }
+   */
+
+   // Above, with shorthand
+  .a {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+  .b {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+  .c {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+  .d {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  .e {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+  .f {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+  }
+
+}
+
+
+/**
+ *
+ * Example 03: A little more compact
+ *
+ */
+.grid--three {
+   @extend .grid--wrapper;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-rows: auto auto;
+
+   .box {
+      border: 1px solid pink;
+      padding: 20px;
+   }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

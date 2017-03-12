@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Hello world!</title>
+<title>CSS Grid Experimentation</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -17,17 +17,53 @@
 
 <div class="container">
 <div class="wrap">
-<div class="grid">
+<!-- still using my top-level container/wrap setup for page size/structure  -->
+
+<h1>CSS Grid Experimentation</h1>
+<h4>Pirmary Resource: <a href="http://gridbyexample.com/">Grid By Emaxple</a></h4>
+<p>&nbsp;</p>
 
 
-<div class="single-col">
-
-    <p>Hello world!</p>
-
+<!-- Example 01: Defining a Basic Grid -->
+<div class="grid--one">
+   <div class="box a">A</div>
+   <div class="box b">B</div>
+   <div class="box c">C</div>
+   <div class="box d">D</div>
+   <div class="box e">E</div>
+   <div class="box f">F</div>
 </div>
+<!-- /Example 01 -->
 
 
+<!-- Example 02: Line-based placement -->
+<div class="grid--two">
+  <div class="box a">A</div>
+  <div class="box b">B</div>
+  <div class="box c">C</div>
+  <div class="box d">D</div>
+  <div class="box e">E</div>
+  <div class="box f">F</div>
 </div>
+<!-- /Example 02 -->
+
+
+<!-- Example 03: A little more compact -->
+<h4>Simple uniform column height. Yee Haw.</h4>
+<div class="grid--three">
+  <div class="box a"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+  <div class="box b"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+  <div class="box c"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+  <div class="box d"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+
+  <div class="box e"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+  <div class="box f"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+  <div class="box g"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+  <div class="box h"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+</div>
+<!-- /Example 03 -->
+
+
 </div>
 </div>
 
@@ -40,7 +76,7 @@
 
 /*
 $(document).ready(function () {
-    $( '#node' ).fname( args );
+   $( '#node' ).fname( args );
 });
 */
 
