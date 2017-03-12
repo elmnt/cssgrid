@@ -1,3 +1,3 @@
-# git-app-dist
+# cssgrid
 
-Just a quick setup to sandbox new ideas.
+Sandbox for CSS Grid experimentation
