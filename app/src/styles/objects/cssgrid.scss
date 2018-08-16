@@ -116,6 +116,7 @@
    */
 
    // Above, with shorthand
+   /*
   .a {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
@@ -140,6 +141,7 @@
     grid-column: 3 / 4;
     grid-row: 1 / 2;
   }
+  */
 
 }
 
@@ -152,8 +154,18 @@
 .grid--three {
    @extend .grid--wrapper;
    display: grid;
-   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-columns: 1fr;
    grid-template-rows: auto auto;
+
+   @media only screen and (min-width: 700px) and (max-width: 1200px) {
+      grid-template-columns: 1fr 1fr;
+   }
+   @media only screen and (min-width: 1200px) and (max-width: 1600px) {
+      grid-template-columns: 1fr 1fr 1fr;
+   }
+   @media only screen and (min-width: 1600px) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+   }
 
    .box {
       border: 1px solid pink;
